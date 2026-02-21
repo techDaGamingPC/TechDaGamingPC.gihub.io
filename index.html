@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechDaGamingPC | Pro Tech Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00f2ff;
+            --secondary: #7000ff;
+            --bg: #050505;
+            --card-bg: rgba(255, 255, 255, 0.03);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Kantumruy Pro', sans-serif;
+            background-color: var(--bg);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--secondary);
+            backdrop-filter: blur(10px);
+        }
+
+        nav a { color: #fff; text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+        nav a:hover { color: var(--primary); }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle, #1a1a2e 0%, #050505 100%);
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2.5rem, 10vw, 5rem);
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 20px rgba(0, 242, 255, 0.4));
+        }
+
+        /* Grid Layout */
+        .container { max-width: 1200px; margin: auto; padding: 80px 20px; }
+        .section-title { 
+            font-family: 'Orbitron', sans-serif;
+            text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: var(--primary); 
+        }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+        /* Modern Card Design */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 35px;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            border-color: var(--primary);
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.07);
+            box-shadow: 0 0 30px rgba(0, 242, 255, 0.2);
+        }
+
+        .card h3 { color: var(--primary); margin-bottom: 15px; font-family: 'Orbitron', sans-serif; }
+
+        /* Contact Section */
+        .contact-box {
+            background: linear-gradient(135deg, var(--secondary), #300066);
+            padding: 50px;
+            border-radius: 30px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            background: var(--primary);
+            color: #000;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn:hover { transform: scale(1.1); box-shadow: 0 0 20px var(--primary); }
+
+        footer { text-align: center; padding: 40px; border-top: 1px solid #222; color: #555; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#services">សេវាកម្ម</a>
+        <a href="#products">ផលិតផល</a>
+        <a href="#contact">ទំនាក់ទំនង</a>
+    </nav>
+
+    <section class="hero">
+        <h1>TechDaGamingPC</h1>
+        <p style="letter-spacing: 3px; color: var(--primary);">LOS ANGELES TECH HUB</p>
+        <a href="#services" class="btn">ស្វែងយល់បន្ថែម</a>
+    </section>
+
+    <div class="container" id="services">
+        <h2 class="section-title">សេវាកម្មរបស់យើង</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>PC Building</h3>
+                <p>ដំឡើងកុំព្យូទ័រ Gaming កម្លាំងខ្លាំង ជាមួយការរៀបចំខ្សែភ្លើងឱ្យមានសណ្តាប់ធ្នាប់ និងស្អាតបំផុត។</p>
+            </div>
+            <div class="card">
+                <h3>Maintenance</h3>
+                <p>សេវាកម្មសម្អាត ផ្លាស់ប្តូរ Thermal Paste និងត្រួតពិនិត្យសុខភាពកុំព្យូទ័រឱ្យដើរលឿនដូចថ្មី។</p>
+            </div>
+            <div class="card">
+                <h3>Tech Consult</h3>
+                <p>ផ្តល់ប្រឹក្សាលើការទិញគ្រឿងបន្លាស់កុំព្យូទ័រឱ្យត្រូវនឹងតម្រូវការប្រើប្រាស់ និងថវិការបស់អ្នក។</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="products">
+        <h2 class="section-title">គ្រឿងបន្លាស់ពេញនិយម</h2>
+        <div class="grid">
+            <div class="card">
+                <h3 style="color: #ff00ff;">GPU Series</h3>
+                <p>RTX 4090, 4080 និងស៊េរីថ្មីៗបំផុត នាំចូលផ្ទាល់ពីអាមេរិក។</p>
+            </div>
+            <div class="card">
+                <h3 style="color: #ff00ff;">Custom Water Cooling</h3>
+                <p>ប្រព័ន្ធត្រជាក់ដោយទឹក បង្កើនសម្រស់ និងកាត់បន្ថយកម្ដៅម៉ាស៊ីន។</p>
+            </div>
+            <div class="card">
+                <h3 style="color: #ff00ff;">Gaming Gear</h3>
+                <p>Keyboard, Mouse និង Headset ស៊េរីទំនើបសម្រាប់ Gamer អាជីព។</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="contact">
+        <div class="contact-box">
+            <h2>ចាប់ផ្តើមគម្រោងរបស់អ្នកឥឡូវនេះ</h2>
+            <p>ផ្ញើសារមកកាន់យើង ដើម្បីទទួលបានការដំឡើងកុំព្យូទ័រក្នុងក្តីស្រមៃរបស់អ្នក</p>
+            <a href="mailto:your-email@example.com" class="btn" style="background: #fff;">ផ្ញើអ៊ីមែលមកខ្ញុំ</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 TechDaGamingPC. All Rights Reserved. | Los Angeles, California</p>
+    </footer>
+
+</body>
+          </html>
+              
